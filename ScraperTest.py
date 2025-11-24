@@ -60,6 +60,27 @@ class ScaperTest(unittest.TestCase):
         }
 
         self.assertEqual(results, expected)
+    
+    def test_getDropDates_invalid_rows(self):
+        Mock_HTML = """
+            <table>
+                <tr><td>Last Day to Drop A Course</td><td>January 22</td></tr>
+                <tr><td>Last Day to Drop A Course Without a W</td><td>LLL?&LL</td></tr>   
+                <tr><td>Last Day to Drop A Course</td><td>July 12</td></tr>   
+                <tr><td>Last Day to Drop A Course Without a W</td><td>August 8</td></tr>
+            </table>       
+        """
+        soup = BeautifulSoup(Mock_HTML, "html.parser")
+        results = Scraper.getDropDates(soup)
+
+        expected = {
+            "Spring Semester": ["January 22"],
+            "Summer Semester": ["July 12", "August 8"]
+        }
+
+        self.assertEqual(results, expected)
+
+    
         
 
 
