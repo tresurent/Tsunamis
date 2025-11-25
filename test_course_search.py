@@ -3,7 +3,7 @@ from course_search import (
     Course,
     CURRENT_SEMESTER,
     COURSE_OFFERINGS,
-    search_course_offerings,
+    search_course_offerings, 
 )
 
 
