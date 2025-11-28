@@ -1,4 +1,4 @@
-# Tsunnamis
+# Tsunamis
 
 ## Final Release Checklist
 - [ ] README states purpose, contributors, and how to build, run, and test all the code from the CLI.  Build and run should not assume everyone is using a particular IDE (so don't assume users can click a Run button or use VSC's Command Prompt commands.
