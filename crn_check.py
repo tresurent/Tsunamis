@@ -64,6 +64,19 @@ def validate_course_code(raw_code: str) -> str:
     return cleaned
 
 
+def find_sections_for_code(courses: List[Course], course_code: str) -> List[Course]:
+    """
+    Find all Course rows whose subject+number match the given code.
+    Example course_code: 'MATH 2550'
+    """
+    subject, number = course_code.split()
+
+    return [
+        c for c in courses
+        if c.subject == subject and c.number == number
+    ]
+
+
 def prompt_subject() -> str:
     return input("Enter a subject code (e.g., MATH, CPSC, ENGL): ").strip()
 
