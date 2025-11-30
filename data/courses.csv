@@ -1,0 +1,10 @@
+subject,number,title,crn,prerequisites,add_deadline,drop_deadline
+MATH,2550,Calculus III,12345,"MATH 2540",2025-01-20,2025-02-10
+ENGL,2010,Intro to Literature,67890,"ENGL 1010",2025-01-20,2025-02-10
+CPSC,1710,Intro to Programming,54321,"None",2025-01-20,2025-02-10
+HIST,1100,World History,98765,"None",2025-01-20,2025-02-10
+PHYS,1210,General Physics I,11223,"MATH 2550",2025-01-20,2025-02-10
+CHEM,1010,General Chemistry,33445,"None",2025-01-20,2025-02-10
+BIOL,1100,Intro to Biology,55667,"None",2025-01-20,2025-02-10
+ECON,1010,Principles of Economics,77889,"None",2025-01-20,2025-02-10
+PSYC,1000,Introduction to Psychology,99001,"None",2025-01-20,2025-02-10
