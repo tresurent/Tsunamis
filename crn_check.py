@@ -64,6 +64,40 @@ def validate_course_code(raw_code: str) -> str:
     return cleaned
 
 
+def find_sections_for_code(courses: List[Course], course_code: str) -> List[Course]:
+    """
+    Find all Course rows whose subject+number match the given code.
+    Example course_code: 'MATH 2550'
+    """
+    subject, number = course_code.split()
+
+    return [
+        c for c in courses
+        if c.subject == subject and c.number == number
+    ]
+
+def check_course_availability(course_code_input: str, courses: List[Course]) -> str:
+    """
+    Returns a message describing whether the course is offered this semester,
+    and lists matching sections (CRN and title).
+    """
+    try:
+        code = validate_course_code(course_code_input)
+    except ValueError as exc:
+        return f"Error: {exc}"
+
+    matches = find_sections_for_code(courses, code)
+
+    if not matches:
+        return f"{code} is not offered this semester."
+
+    lines = [f"{code} is offered this semester. Matching sections:"]
+    for c in matches:
+        lines.append(f"CRN {c.crn} | {c.title}")
+
+    return "\n".join(lines)
+
+
 def prompt_subject() -> str:
     return input("Enter a subject code (e.g., MATH, CPSC, ENGL): ").strip()
 
