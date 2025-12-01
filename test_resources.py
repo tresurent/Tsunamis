@@ -18,6 +18,16 @@ class TestResources(unittest.TestCase):
 
         for item in resources:
             self.assertIsInstance(item, Resource)
+    
+    def test_resource_fields(self):
+        resources = load_default_resources()
+
+        firstResource = resources[0]
+
+        self.assertEqual(firstResource.name, "XULA Academic Calendar")
+        self.assertEqual(firstResource.url, "https://www.xula.edu/academics/calendar")
+        self.assertEqual(firstResource.category, "Academics")
+        self.assertEqual(firstResource.icon, "calendar")
 
 
 
