@@ -21,3 +21,19 @@
 4. CPSC Electives
 5. CPSC Degree Works
 6. CPSC Study Buddies
+
+
+# How to Run the CPSC Help Desk Project
+
+## Run the application
+python driver.py
+
+(If on Windows, you may need to use:)
+py driver.py
+
+
+## Run all unit tests
+python -m unittest discover
+
+(If on Windows, you may need to use:)
+py -m unittest discover
