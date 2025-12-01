@@ -54,6 +54,14 @@ class TestResources(unittest.TestCase):
             test_link = item.url
             self.assertTrue(TestResources.link_requests(test_link))
 
+    @patch("requests.head")
+    def test_nonfunctional_links(self, mock_get):
+        mock_response = MagicMock()
+        mock_response.status_code = 404
+        mock_get.return_value = mock_response
+
+        self.assertFalse(TestResources.link_requests("https://invalid-url#"))
+
             
 
 
