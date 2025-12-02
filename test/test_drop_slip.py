@@ -54,6 +54,21 @@ class TestDropSlip(unittest.TestCase):
 
         self.assertEqual(filename, "test_output.txt")
 
+    def test_convert_numbers_to_text(self):
+        course_info = {
+            "crn": 10001,
+            "subject": "Math",
+            "course_number": 1090,
+            "title": "Calculus 2",
+            "days": "MWF",
+            "time": "10:00-10:50"
+        }
+        temp = DropSlip("Ben Johnson", "104023", "Fall 2025", course_info)
+        output = temp.to_text()
+
+        self.assertIn("CRN: 10001", output)
+        self.assertIn("course_number: 1090", output)
+
 
 if __name__ == '__main__':
     unittest.main()
