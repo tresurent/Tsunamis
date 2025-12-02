@@ -21,5 +21,16 @@ class TestDropSlip(unittest.TestCase):
         self.assertIn("CRN: 10001", output)
         self.assertIn("Student Signature:", output)
 
+    def test_to_text_empty_fields(self):
+        course_info = {}
+
+        temp = DropSlip("Ben Johnson", "104023", "Fall 2025", course_info)
+        output = temp.to_text()
+
+        self.assertIn("Student Name: Ben Johnson", output)
+        self.assertIn("Student ID: 104023", output)
+        self.assertIn("CRN:", output)
+        self.assertIn("Title:", output)
+
 if __name__ == '__main__':
     unittest.main()
