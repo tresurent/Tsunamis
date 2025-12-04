@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import mock_open, patch
-from drop_slip import DropSlip, write_drop_slip_to_file
+from help_desk.drop_slip import DropSlip, write_drop_slip_to_file
 
 class TestDropSlip(unittest.TestCase):
 
@@ -67,7 +67,7 @@ class TestDropSlip(unittest.TestCase):
         output = temp.to_text()
 
         self.assertIn("CRN: 10001", output)
-        self.assertIn("course_number: 1090", output)
+        self.assertIn("Course: Math 1090", output)
     
     def test_write_drop_slip_default_filename(self):
         course_info = {

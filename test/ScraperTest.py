@@ -1,12 +1,12 @@
 import unittest
 import requests
-from PerformScraping import Scraper
+from help_desk.PerformScraping import Scraper
 from bs4 import BeautifulSoup
 from unittest.mock import patch, MagicMock
 
 class ScaperTest(unittest.TestCase):
 
-    @patch('PerformScraping.requests.get')
+    @patch('help_desk.PerformScraping.requests.get')
     def test_getAcademicCalander_success(self,mock_get):
         url = "https://sample.com"
         mock_response = MagicMock()
@@ -19,7 +19,7 @@ class ScaperTest(unittest.TestCase):
         self.assertIsInstance(soup, BeautifulSoup)
         self.assertEqual(soup.text, "Academic Calendar")
 
-    @patch('PerformScraping.requests.get')
+    @patch('help_desk.PerformScraping.requests.get')
     def test_getAcademicCalander_no_url_provided(self, mock_get):
         mock_response = MagicMock()
         mock_response.status_code = 200
@@ -30,7 +30,7 @@ class ScaperTest(unittest.TestCase):
 
         self.assertIsInstance(soup, BeautifulSoup)
 
-    @patch('PerformScraping.requests.get')
+    @patch('help_desk.PerformScraping.requests.get')
     def test_getAcademicCalander_invalid_url(self, mock_get):
         url = "https://invalid-url"
         mock_response = MagicMock()
