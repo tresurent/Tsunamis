@@ -50,4 +50,20 @@ py driver.py
 
 ## Run all unit tests
 
+Before running the tests you will first need to install few python libraries. It is best practice to create a virtual environment prior to installing libraries.
+
+Create virtual environment(Optional):
+  -python -m venv .venv
+  -source .venv/bin/activate
+Install necessary libraries:
+  -pip install requests
+  -pip install bs4
+Commands to run tests:
+  -python -m unittest test.ScraperTest
+  -python -m unittest test.test_course_search
+  -python -m unittest test.test_crn_check
+  -python -m unittest test.test_drop_slip
+  -python -m unittest test.test_resources
+  -python -m unittest test.test_schedule 
+
 
