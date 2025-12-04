@@ -44,39 +44,39 @@ No instructions were provided for how to run your test.
 ## Run the application
 Before running the application you will first need to install few python libraries. It is best practice to create a virtual environment prior to installing libraries.
 
-Create virtual environment(Optional):
-  -python -m venv .venv
-  -source .venv/bin/activate
+Create virtual environment(Optional):  
+  python -m venv .venv  
+  source .venv/bin/activate  
 
-Install necessary libraries:
-  -pip install requests
-  -pip install bs4
+Install necessary libraries:  
+  pip install requests  
+  pip install bs4  
 
-Command to run application:
-  -python driver.py
+Command to run application:  
+  python driver.py  
 
-(If on Windows, you may need to use:)
-  -py driver.py
+(If on Windows, you may need to use:)  
+  py driver.py  
 
 
 ## Run all unit tests
 
 Before running the tests you will first need to install few python libraries. It is best practice to create a virtual environment prior to installing libraries. (Skip if you have already done this.)
 
-Create virtual environment(Optional):
-  -python -m venv .venv
-  -source .venv/bin/activate
+Create virtual environment(Optional):  
+  python -m venv .venv  
+  source .venv/bin/activate  
 
-Install necessary libraries:
-  -pip install requests
-  -pip install bs4
+Install necessary libraries:  
+  pip install requests  
+  pip install bs4  
 
-Commands to run tests:
-  -python -m unittest test.ScraperTest
-  -python -m unittest test.test_course_search
-  -python -m unittest test.test_crn_check
-  -python -m unittest test.test_drop_slip
-  -python -m unittest test.test_resources
-  -python -m unittest test.test_schedule 
+Commands to run tests:  
+  python -m unittest test.ScraperTest  
+  python -m unittest test.test_course_search  
+  python -m unittest test.test_crn_check  
+  python -m unittest test.test_drop_slip  
+  python -m unittest test.test_resources  
+  python -m unittest test.test_schedule  
 
 
