@@ -1,0 +1,14 @@
+===== DROP SLIP =====
+Student Name: t
+Student ID: 9
+Term: Fall 2025
+
+Course to Drop:
+CRN: 67890
+Course: ENGL 2010
+Title: Intro to Literature
+Days: 
+Time: 
+
+Student Signature: ________________________
+Date: _______________
