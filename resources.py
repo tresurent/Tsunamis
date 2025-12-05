@@ -80,3 +80,4 @@ def load_resources_from_json() -> List[Resource]:
         raw = json.load(f)
 
     return [Resource(**item) for item in raw]
+
